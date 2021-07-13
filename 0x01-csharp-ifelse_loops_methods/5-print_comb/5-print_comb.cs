@@ -9,11 +9,11 @@ class Program
         {
             if (num <= 98)
             {
-                Console.Write("{0}, ", num);
+                Console.Write("{0:d}, ", num);
             }
             else
             {
-                Console.Write("{0}", num);
+                Console.Write("{0:d}", num);
             }
         }
     }
