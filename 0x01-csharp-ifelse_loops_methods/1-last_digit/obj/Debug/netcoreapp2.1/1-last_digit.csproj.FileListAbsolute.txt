@@ -1,0 +1,11 @@
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/bin/Debug/netcoreapp2.1/1-last_digit.deps.json
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/bin/Debug/netcoreapp2.1/1-last_digit.runtimeconfig.json
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/bin/Debug/netcoreapp2.1/1-last_digit.runtimeconfig.dev.json
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/bin/Debug/netcoreapp2.1/1-last_digit.dll
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/bin/Debug/netcoreapp2.1/1-last_digit.pdb
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.csprojAssemblyReference.cache
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.csproj.CoreCompileInputs.cache
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.AssemblyInfoInputs.cache
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.AssemblyInfo.cs
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.dll
+/Users/vanndy/holbertonschool-csharp/0x01-csharp-ifelse_loops_methods/1-last_digit/obj/Debug/netcoreapp2.1/1-last_digit.pdb
