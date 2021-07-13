@@ -9,7 +9,7 @@ class Program
         {
             if (num <= 98)
             {
-                Console.Write("{0:d}, ", num);
+                Console.Write("{0:d2}, ", num);
             }
             else
             {
