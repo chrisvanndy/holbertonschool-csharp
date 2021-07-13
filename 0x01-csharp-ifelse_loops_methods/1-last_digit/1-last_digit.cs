@@ -15,7 +15,7 @@ class Prgram
         {
 	    Console.WriteLine("The last digit of {0} is {1} and is less than 6 and not 0", number, last);
 	}
-        else (last == 0)
+        else 
         {
 	    Console.WriteLine("The last digit of {0} is {1} is 0 and is 0", number, last);
         } 
