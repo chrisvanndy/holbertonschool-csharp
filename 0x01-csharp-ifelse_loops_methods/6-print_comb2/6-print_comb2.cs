@@ -9,11 +9,11 @@ class Program
             {
                 if (x < 8)
                 {
-                    Console.Write("{0}{1}, ", x, y);
+                    Console.Write("{0:d}{1:d}, ", x, y);
                 }
                 else
                 {
-                    Console.WriteLine("{0}{1}", x, y);
+                    Console.WriteLine("{0:d}{1:d}", x, y);
                 }
             }
         }
