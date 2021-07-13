@@ -9,7 +9,7 @@ namespace _4_print_hexa
             int hex;
             for (hex = 0; hex <= 98; hex++)
             {
-                Console.WriteLine("{0} = 0x{0:X2}", hex);
+                Console.WriteLine("{0} = 0x{0:x2}", hex);
             }
 	}
     }
