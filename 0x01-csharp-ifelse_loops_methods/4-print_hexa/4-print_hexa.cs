@@ -1,16 +1,14 @@
 ﻿using System;
 
-namespace _4_print_hexa
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int hex;
+        for (hex = 0; hex <= 98; hex++)
         {
-            int hex;
-            for (hex = 0; hex <= 98; hex++)
-            {
-                Console.WriteLine("{0} = 0x{0:x2}", hex);
-            }
-	}
+            Console.WriteLine("{0} = 0x{0:x2}", hex);
+        }
     }
 }
+
