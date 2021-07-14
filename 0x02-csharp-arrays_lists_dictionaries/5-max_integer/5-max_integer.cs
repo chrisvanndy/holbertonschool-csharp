@@ -8,14 +8,13 @@ class List
 
         if (myList.Count == 0 || myList == null)
         {
-            Console.WriteLine("List is Empty");
-            return -1;
+            Console.WriteLine("List is empty");
+            return (-1);
         }
         // sorting list sorts items in ascending order
         myList.Sort();
         // return sorted list (count - 1)
-        return myList[myList.Count -1];
-    
+        return (myList[myList.Count -1]);
     }    
 }
 
