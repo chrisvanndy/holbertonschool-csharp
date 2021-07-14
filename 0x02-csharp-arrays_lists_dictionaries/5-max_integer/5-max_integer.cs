@@ -14,7 +14,7 @@ class List
         // sorting list sorts items in ascending order
         myList.Sort();
         // return sorted list (count - 1)
-        return (myList[myList.Count -1]);
+        return myList[myList.Count -1];
     
     }    
 }
