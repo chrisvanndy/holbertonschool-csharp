@@ -5,11 +5,8 @@ class Dictionary
 {
     public static Dictionary<string, string> AddKeyValue(Dictionary<string, string> myDict, string key, string value)
     {
-        myDict.Add(key, value);
-        if (myDict.ContainsKey(key))
-        {
-            myDict[key] = value;
-        }
+        // if a key already exsists update it, else create it.
+        myDict[key] = value;
      
         return myDict;
     }
