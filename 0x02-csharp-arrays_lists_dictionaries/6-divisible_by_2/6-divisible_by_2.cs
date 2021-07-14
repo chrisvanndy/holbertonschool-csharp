@@ -7,9 +7,10 @@ class List
     {
         // return a new list
         List<bool> newList = new List<bool>();
-
+        // iterate through passed list
         foreach (int num in myList)
         {
+            // add values to new list based on if
             if (num % 2 == 0)
             {
                 newList.Add(true);
@@ -19,7 +20,7 @@ class List
                 newList.Add(false);
             }
         }
-        
+        // return new list
         return newList;
     }
 }
