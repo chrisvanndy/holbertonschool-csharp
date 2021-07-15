@@ -4,29 +4,15 @@ class MyStack
 {
     public static Stack<string> Info(Stack<string> aStack, string newItem, string search)
     {
-        int count = 0;
-        string booly;
 
-        
-        if (aStack == null || aStack.Count == 0)
-        {
-            Console.WriteLine("Stack is empty");
-        }
-        else
-        {
-            foreach (string item in aStack)
-            {
-                count++;
-            }
-        }  
-
-        Console.WriteLine("Number of items: {0}", count);
+        Console.WriteLine("Number of items: {0}", aStack.Count);
 
         Console.WriteLine("Top item: {0}", aStack.Peek());
 
+         Console.WriteLine("Stack contains \"{0}\": {1}", search, aStack.Contains(search));
+
         if (aStack.Contains(search))
         {
-            booly = "True";
             while (aStack.Count > 0)
             {
                 string val = aStack.Pop();
@@ -37,11 +23,6 @@ class MyStack
                
             }
         }
-        else
-        {
-            booly = "False";
-        }
-        Console.WriteLine("Stack contains {0}: {1}", search, booly);
 
         aStack.Push(newItem);
 
