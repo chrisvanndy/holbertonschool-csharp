@@ -5,6 +5,18 @@ class List
 {
     public static int Sum(List<int> myList)
     {
+        int sum = 0;
+        HashSet<int> math = new HashSet<int>(myList);
+
+        foreach (int number in math)
+        {
+            sum += number;
+        }
+        return sum;
+    }
+}
+    /* public static int Sum(List<int> myList)
+    {
         List<int> math = new List<int>();
         int sum = 0;
         foreach (int number in myList)
@@ -21,5 +33,5 @@ class List
         }
         return sum;
     }
-}
+} */
 
