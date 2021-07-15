@@ -5,7 +5,6 @@ class MyQueue
 {
     public static Queue<string> Info(Queue<string> aQueue, string newItem, string search)         
     {
-        string booly;
 
         Console.WriteLine("Number of items: {0}", aQueue.Count);
 
@@ -20,9 +19,10 @@ class MyQueue
 
         aQueue.Enqueue(newItem);
 
+        Console.WriteLine("Queue contains \"{0}\": {1}", search, aQueue.Contains(search));
+
         if (aQueue.Contains(search))
         {
-            booly = "True";
             while (aQueue.Count > 0)
             {
                 string val = aQueue.Dequeue();
@@ -32,12 +32,6 @@ class MyQueue
                 }
             }
         }
-        else
-        {
-            booly = "False";
-        }
-
-        Console.WriteLine("Queue contains {0}: {1}", search, booly);
 
         return aQueue;        
     }
