@@ -29,8 +29,8 @@ class MyStack
             booly = "True";
             while (aStack.Count > 0)
             {
-                aStack.Pop();
-                if (aStack.Pop() == search)
+                string val = aStack.Pop();
+                if (val == search)
                 {
                     break;
                 }
