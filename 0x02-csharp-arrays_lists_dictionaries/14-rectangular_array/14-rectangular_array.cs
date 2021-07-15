@@ -22,11 +22,8 @@ class Program
         {
             for (int y = 0; y < height; y++)
             {
-                Console.Write(grid[x,y]);
-                if(y < height - 1)
-                {
-                    Console.Write(" ");
-                }
+                Console.Write(grid[x,y] + " ");
+            
             }
         Console.WriteLine();
         }
