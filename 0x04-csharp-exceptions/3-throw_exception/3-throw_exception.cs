@@ -10,3 +10,4 @@ class Except
     }
 }
 
+// "throw new Exception; also works and is less code
