@@ -21,7 +21,7 @@ class List
             catch (DivideByZeroException)
             {
                 //elements can’t be divided, division result equals 0
-                Console.WriteLine("Cannot Divide by zero");
+                Console.WriteLine("Cannot divide by zero");
                 newList.Add(0);
                 
             }
