@@ -1,0 +1,6 @@
+obj/
+nunit*
+*.dll
+*.pdb
+*.json
+*.xml
