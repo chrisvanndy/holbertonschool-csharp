@@ -22,7 +22,7 @@ namespace Text
         
             foreach (char c in s)
             {
-                if (c > 97 || c < 122)
+                if (c >= 97 || c <= 122)
                 {
                     onlyChars += c;
                 }

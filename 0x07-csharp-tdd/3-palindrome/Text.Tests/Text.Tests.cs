@@ -37,5 +37,21 @@ namespace Text.Tests
             var palindrome =  Str.IsPalindrome("My name is Vanndy");
             Assert.IsFalse(palindrome);
         }
+
+        [Test]
+        ///<summary>Tests the world Holberton</summary>
+        public void Palindrome_Holberton()
+        {
+            var palindrome = Str.IsPalindrome("Holberton");
+            Assert.IsFalse(palindrome);
+        }
+        
+        [Test]
+        ///<summary>Tests the phrase: "A man, a plan, a canal: Panama."</summary>
+        public void Palindrome_given()
+        {
+            var palindrome = Str.IsPalindrome("A man, a plan, a canal: Panama.");
+            Assert.IsTrue(palindrome);
+        }
     }
 }
