@@ -3,35 +3,32 @@ using System.Linq;
 
 namespace MyMath
 {
-    ///<summary>The Matrix class define methods and attributeds</summary>
+    ///<summary>MyMath contains class Matrix, and methods to perform arithmetic on the Matrix class.</summary>
     public class Matrix
     {
-        ///<summary>Divides given matrix by given integer<summary>
+        ///<summary>Divides given matrix by given integer.</summary>
+        ///<param name="matrix">Given array for division.</param>
+        ///<param name="num">Given integer to divide array.</param>
+        ///<returns>New "matrix" divided by "num".</returns>
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (num == 0)
             {
-                Console.WriteLine("Num cannot be 0");
+                Console.Error.WriteLine("Num cannot be 0");
                 return null;
             }
-            else if (matrix == null)
+            if (matrix == null)
             {
                 return null;
             }
-            else
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                int rows = matrix.GetLength(0);
-                int columns = matrix.GetLength(1);
-
-                for (int i = 0; i < rows; i++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    for (int j = 0; j < columns; j++)
-                    {
-                        matrix[i,j] /= num;
-                    }
+                    matrix[i,j] /= num;
                 }
-                return matrix;
             }
+            return matrix;
         }
     }
 }

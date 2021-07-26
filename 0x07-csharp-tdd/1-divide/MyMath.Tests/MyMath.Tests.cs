@@ -5,27 +5,20 @@ using System.Linq;
 
 namespace MyMath.Tests
 {
-     [TestFixture]
+    [TestFixture]
+    ///<summary> MyMath.Tests namespace contains MatrixTest class, and methods to text the methods of the "Matrix" class from "MyMath"</summary>
     public class MatrixTests
     {
+        ///<summary>Define a new matrix to test with.</summary>
+        public static int[,] testMatrix = new int[3,3] {{2, 4, 6}, {8, 10, 12}, {14, 16, 18}};
+        
         [Test]
-        ///<summary>Tests Matrix.Divid() is not null</summary>
-        public void Matrix_notnull()
+        ///<summary>Text Divide function with dividision by "num".</summary>
+        public void Matrix_Division()
         {
-            var newMatrix = new Random();
-            var array = (from col in Enumerable.Range(0, 4)
-                        select (from row in Enumerable.Range(0, 4)
-                        select newMatrix.Next()).ToArray()).ToArray();
-
-            int divided = Matrix.Divide(newMatrix, 2);
-
-            Assert.IsNotNull(divided);
+            int[,] solution = Matrix.Divide(testMatrix, 2);
+            Assert.AreEqual(solution, new int[3,3]{{1, 2, 3,}, {4, 5, 6}, {7, 8, 9}});
         }
 
-        [Test]
-        public void Matrix_()
-        {
-            
-        }
     }
 }
