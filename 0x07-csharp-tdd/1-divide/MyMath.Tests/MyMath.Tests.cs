@@ -6,10 +6,9 @@ using System.Linq;
 namespace MyMath.Tests
 {
     [TestFixture]
-    ///<summary> MyMath.Tests namespace contains MatrixTest class, and methods to text the methods of the "Matrix" class from "MyMath"</summary>
     public class MatrixTests
     {
-        ///<summary>Define a new matrix to test with.</summary>
+       
         public static int[,] testMatrix = new int[3,3] {{2, 4, 6}, {8, 10, 12}, {14, 16, 18}};
         
         [Test]
