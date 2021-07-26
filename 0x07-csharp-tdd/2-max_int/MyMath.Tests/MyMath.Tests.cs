@@ -31,8 +31,8 @@ namespace MyMath.Tests
         ///<summary>Max_Positive_end checks for maximum int with negatives in list<summary>
         public void Max_Positive_negative()
         {
-            var myList = new List<int>{1, -2, 5, -3, 4};
-            Assert.AreEqual(5, Operations.Max(myList));
+            var myList = new List<int>{-1, -2, -5, -3, -4};
+            Assert.AreEqual(-1, Operations.Max(myList));
         }
         [Test]
         ///<summary>Max_Positive_end checks for maximum int an empty list<summary>
