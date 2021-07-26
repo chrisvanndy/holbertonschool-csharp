@@ -27,15 +27,15 @@ namespace Text.Tests
         ///<summary>Tests palindrom with spaces, special characters, caps</summary>
         public void Palindrome_ispalindrome_specialChar()
         {
-            var palindrome =  Str.IsPalindrome("Po-op po-oP");
+            var palindrome =  Str.IsPalindrome("taco cat");
             Assert.IsTrue(palindrome);
         }
         [Test]
         ///<summary>Tests palindrom with no spaces, special characters, caps</summary>
         public void Palindrome_isNotpalindrome_specialChar()
         {
-            var palindrome =  Str.IsPalindrome("My name is Vanndy");
-            Assert.IsFalse(palindrome);
+            var palindrome =  Str.IsPalindrome("A man, a plan, a canal: Panama.");
+            Assert.IsTrue(palindrome);
         }
 
         [Test]
