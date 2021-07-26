@@ -47,11 +47,12 @@ namespace Text.Tests
         }
         
         [Test]
-        ///<summary>Tests the phrase: "A man, a plan, a canal: Panama."</summary>
-        public void Palindrome_given()
+        ///<summary>Tests empty string</summary>
+         public void Palindrome_empty_string()
         {
-            var palindrome = Str.IsPalindrome("A man, a plan, a canal: Panama.");
+            var palindrome = Str.IsPalindrome("");
             Assert.IsTrue(palindrome);
         }
+        
     }
 }
