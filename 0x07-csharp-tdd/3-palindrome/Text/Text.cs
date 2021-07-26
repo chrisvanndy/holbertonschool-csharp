@@ -9,6 +9,7 @@ namespace Text
     {
         ///<summary>IsPalindrome tests to see if parameter is palindrome.</summary>
         ///<param name="s">"s" is given string to be tested.</param>
+        ///<returns>True if the passed string is a palendrome</returns>
         public static bool IsPalindrome(string s)
         {
             if (s.Length == 0 || s.Length == 1)
@@ -16,11 +17,21 @@ namespace Text
                 return true;
             }
 
-            var characters = s.ToArray();
+            s = s.ToLower();
+            string onlyChars = "";
+        
+            foreach (char c in s)
+            {
+                if (c < 97 || c > 122)
+                {
+                    onlyChars += c;
+                }
+            }
 
-            var reversed = characters.Reverse();
+            var testPalindrom = onlyChars.ToArray();
 
-            return characters.SequenceEqual(reversed);
+            return testPalindrom.SequenceEqual(testPalindrom.Reverse());
+
         }
     }
 }
