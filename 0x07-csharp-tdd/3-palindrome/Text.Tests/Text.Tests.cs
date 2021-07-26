@@ -21,7 +21,7 @@ namespace Text.Tests
         public void Palindrome_isNotpalindrome()
         {
             var palindrome =  Str.IsPalindrome("steak");
-            Assert.IsTrue(palindrome);
+            Assert.IsFalse(palindrome);
         }
         [Test]
         ///<summary>Tests palindrom with spaces, special characters, caps</summary>
@@ -35,7 +35,7 @@ namespace Text.Tests
         public void Palindrome_isNotpalindrome_specialChar()
         {
             var palindrome =  Str.IsPalindrome("My name is Vanndy");
-            Assert.IsTrue(palindrome);
+            Assert.IsFalse(palindrome);
         }
     }
 }
