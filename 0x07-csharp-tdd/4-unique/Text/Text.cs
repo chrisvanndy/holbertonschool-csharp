@@ -12,8 +12,8 @@ namespace Text
         {  
             for (int i = 0; i < s.Length; i++)
             {
-                char c = s[i];
-                if (s.Split(c).Length - 1 == 1)
+                char x = s[i];
+                if (s.Split(x).Length - 1 == 1)
                 {
                     return i;
                 }

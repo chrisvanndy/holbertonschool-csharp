@@ -10,24 +10,21 @@ namespace Text.Tests
         ///<summary>Returns index of first nonrepeating characther</summary>
         public void Returns_nonrepeat()
         {
-            int index = Str.UniqueChar("Programmer");
-            Assert.AreEqual(index, 0);
+           Assert.AreEqual(0, Str.UniqueChar("Programmer"));
         }
 
         [Test]
         ///<summary>Returns index of first nonrepeating characther last</summary>
         public void Returns_nonrepeat_last()
         {
-            int index = Str.UniqueChar("Ppeeddr");
-            Assert.AreEqual(index, 0);
+            Assert.AreEqual(4, Str.UniqueChar("jujus"));
         }
 
         [Test]
         ///<summary>Returns index of first nonrepeating characther middle</summary>
         public void Returns_nonrepeat_middle()
         {
-            int index = Str.UniqueChar("Ppeedlltt");
-            Assert.AreEqual(index, 0);
+            Assert.AreEqual(2, Str.UniqueChar("level"));
         }
 
         [Test]
