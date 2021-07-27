@@ -77,11 +77,19 @@ class Square : Rectangle
         }
         set
         {
-            if (size < 0)
+            if (value < 0)
             {
                 throw new ArgumentException("Size must be greater than or equal to 0");
             }
             size = value;
+            Height = value;
+            Width = value;
         }
     }
+    ///<summary>override string to return info about Square</summary>
+    public override string ToString()
+    {
+        return "[Square] " + size + " / " + size;
+    }
+
 }

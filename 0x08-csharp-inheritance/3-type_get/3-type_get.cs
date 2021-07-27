@@ -8,20 +8,19 @@ class Obj
     ///<summary>Prints info about myObj to console.</summary>
     public static void Print(object myObj)
     {
-        Type obj = myObj.GetType();
-        TypeInfo t = obj.GetTypeInfo();
-        IEnumerable<PropertyInfo> pList = t.DeclaredProperties;
-        IEnumerable<MethodInfo> mList = t.DeclaredMethods;
+        PropertyInfo[] prop = myObj.GetType().GetProperties();
+        MethodInfo[] meth = myObj.GetType().GetMethods();
+    
 
-        Console.WriteLine("{0} Properties:", obj.Name);
-        foreach (PropertyInfo p in pList)
+        Console.WriteLine(myObj.GetType().Name + "Properties:");
+        foreach (PropertyInfo p in prop)
         {
-            Console.WriteLine("{0}", p.Name);
+            Console.WriteLine(p.Name);
         }
-        Console.WriteLine("{0} Methods:", obj.Name);
-        foreach (MethodInfo m in mList)
+        Console.WriteLine(myObj.GetType().Name + "Methods:");
+        foreach (MethodInfo m in meth)
         {
-            Console.WriteLine("{0}", m.Name);
+            Console.WriteLine(m.Name);
         }
     }
 }
