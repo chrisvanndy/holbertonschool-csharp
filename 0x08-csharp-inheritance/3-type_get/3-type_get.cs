@@ -12,12 +12,12 @@ class Obj
         MethodInfo[] meth = myObj.GetType().GetMethods();
     
 
-        Console.WriteLine(myObj.GetType().Name + "Properties:");
+        Console.WriteLine(myObj.GetType().Name + " Properties:");
         foreach (PropertyInfo p in prop)
         {
             Console.WriteLine(p.Name);
         }
-        Console.WriteLine(myObj.GetType().Name + "Methods:");
+        Console.WriteLine(myObj.GetType().Name + " Methods:");
         foreach (MethodInfo m in meth)
         {
             Console.WriteLine(m.Name);
