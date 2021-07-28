@@ -83,7 +83,7 @@ class Square : Rectangle
             }
             size = value;
             Height = value;
-            Width = value;
+            Width = value; 
         }
     }
     ///<summary>override string to return info about Square</summary>
