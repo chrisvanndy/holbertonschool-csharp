@@ -7,12 +7,12 @@ class VectorMath
     ///<param name="vector">The given coordinates of a 2D or 3C vector</param>
     public static double Magnitude(double[] vector)
     {
-        double x = 0;
-
         if (vector.Length < 2 || vector.Length > 3)
         {
             return -1;
         }
+        
+        double x = 0;
 
         foreach (double c in vector)
         {
