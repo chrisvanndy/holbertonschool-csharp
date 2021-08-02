@@ -28,12 +28,4 @@
             return product;
         }
 
-        static void Main(string[] args)
-        {
-            double[] vectorEx = new double[]{-31, 20};
-            double scalarEx = 8;
-
-            Console.WriteLine("[{0}]", string.Join(", ", VectorMath.Multiply(vectorEx, scalarEx)));
-
-        }
     }
