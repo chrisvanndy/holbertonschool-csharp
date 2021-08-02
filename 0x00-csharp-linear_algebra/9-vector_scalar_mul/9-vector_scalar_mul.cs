@@ -4,8 +4,8 @@
     class VectorMath
     {
         ///<summary>Multiply returns the vector multiplications of given "vector" by give "scalar".</summary>
-        ///<param name="vector">passed vector can be 2D or 3D vector.<param>
-        ///<param name="scalar">passed scalar can be positive or negative double.<param>
+        ///<param name="vector">passed vector can be 2D or 3D vector.</param>
+        ///<param name="scalar">passed scalar can be positive or negative double.</param>
         public static double[] Multiply(double[] vector, double scalar)
         {
             double[] product = new double[] {-1};
