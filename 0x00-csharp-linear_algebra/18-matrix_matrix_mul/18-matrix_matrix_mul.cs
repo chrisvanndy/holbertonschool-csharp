@@ -12,7 +12,7 @@ class MatrixMath
         int row = matrix1.GetLength(0);
         int col = matrix1.GetLength(1);
         int row2 = matrix2.GetLength(0);
-        int col2 = matrix12.GetLength(1);
+        int col2 = matrix2.GetLength(1);
     
     if (col != row2)
     {
@@ -20,14 +20,14 @@ class MatrixMath
     }
 
     // initialize newMatrix with the correct w/h from passed param
-    newMatrix = new double [colMatrix1, rowMatrix2];
-    for (int i = 0; i < colMatrix1; i++)
+    newMatrix = new double [col, row2];
+    for (int i = 0; i < col; i++)
     {
-        for (int j = 0; j < rowMatrix2; j++)
+        for (int j = 0; j < row2; j++)
         {
             newMatrix[i,j] = 0;
 
-            for (int k = 0; k < colMatrix1; k++)
+            for (int k = 0; k < col; k++)
             {
                 newMatrix[i,j] += matrix1[i, k] * matrix2[k, j];
             }
