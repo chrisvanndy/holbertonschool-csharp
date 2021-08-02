@@ -20,17 +20,18 @@ class MatrixMath
     }
 
     // initialize newMatrix with the correct w/h from passed param
-    newMatrix = new double [col, row2];
-    for (int i = 0; i < col; i++)
+    newMatrix = new double [row, col2];
+    for (int i = 0; i < row; i++)
     {
-        for (int j = 0; j < row2; j++)
+        for (int j = 0; j < col2; j++)
         {
-            newMatrix[i,j] = 0;
+            double temp = 0;
 
             for (int k = 0; k < col; k++)
             {
-                newMatrix[i,j] += matrix1[i, k] * matrix2[k, j];
+                temp += matrix1[i, k] * matrix2[k, j];
             }
+            newMatrix[i,j] = temp;
         }
     }
     return newMatrix;
