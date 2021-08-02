@@ -11,7 +11,7 @@ class MatrixMath
         int row = matrix.GetLength(0);
         int col = matrix.GetLength(1);
 
-        if (row < 1 || col < 2)
+        if (row < 2 || row > 3 || col < 2 || col > 3)
         {
             return notOK;
         }
