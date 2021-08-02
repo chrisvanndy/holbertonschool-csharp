@@ -3,7 +3,7 @@
 class MatrixMath
 {
     ///<summary>MultiplyScalar performs matrix multiplication on a matrix (2D or 3D).</summary>
-    ///<param name="matrix1">passed parameter matrix1 can be 2D or 3D matrix of == length to matrix2.</param>
+    ///<param name="matrix">passed parameter matrix1 can be 2D or 3D matrix of == length to matrix2.</param>
     ///<param name="scalar">passed parameter scalar is a double by which to multiply members of the matrix.</param>
     public static double[,] MultiplyScalar(double[,] matrix, double scalar)
     {
