@@ -16,12 +16,15 @@ class MatrixMath
     {
         return cantMul;
     }
-
+    
+    // initialize newMatrix with the correct w/h from passed param
+    newMatrix = new double [colMatrix1, rowMatrix2];
     for (int i = 0; i < colMatrix1; i++)
     {
         for (int j = 0; j < rowMatrix2; j++)
         {
-            newMatrix[i,h] = 0;
+            newMatrix[i,j] = 0;
+
             for (int k = 0; k < colMatrix1; k++)
             {
                 newMatrix[i,j] += matrix1[i, k] * matrix2[k, j];
