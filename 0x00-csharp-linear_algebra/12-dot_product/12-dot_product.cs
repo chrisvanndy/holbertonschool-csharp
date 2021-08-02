@@ -21,15 +21,4 @@ class VectorMath
         return (dProduct);
 
     }
-
-    static void Main(string[] args)
-    {
-        double[] array1 = new double[] {1, 2, 1};
-        double[] array2 = new double[] {1, 2, 2};
-
-        Console.WriteLine("[{0}]", string.Join(", ", VectorMath.DotProduct(array1, array2)));
-
-    }
-
-
 }
