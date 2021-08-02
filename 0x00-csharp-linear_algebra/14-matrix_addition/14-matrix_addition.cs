@@ -19,9 +19,9 @@ class MatrixMath
 
         if ((row == 2 && col == 2) && row == row2)
         {
-           sumMatrix = new double[2, 2];
+            sumMatrix = new double[2, 2];
         }
-        if((row == 3 && col == 3) && row == row2)
+        else if ((row == 3 && col == 3) && row == row2)
         {
             sumMatrix = new double[3, 3];
         }
