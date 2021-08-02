@@ -3,7 +3,7 @@
 ///<summary>Vector math contains functions that perform linear alebraic equations with 2D and 3D vectors.</summary>
 class VectorMath
 {
-    ///<summary>Add adds two vectors (2D or 3D) and returns the resulting vector.<summary>
+    ///<summary>Add adds two vectors (2D or 3D) and returns the resulting vector.</summary>
     ///<param name="vector1">2D or 3D vector a</param>
     ///<param name="vector2">2D or 3D vector b</param>
     public static double[] Add(double[] vector1, double[] vector2)
@@ -21,7 +21,7 @@ class VectorMath
         return (vectorArray);
 
     }
-}
 
+}
 
 
