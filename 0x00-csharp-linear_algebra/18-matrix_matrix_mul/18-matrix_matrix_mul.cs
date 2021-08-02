@@ -9,14 +9,16 @@ class MatrixMath
     {
         double[,] cantMul = new double[,]{{-1}};
         double[,] newMatrix;
-        int colMatrix1 = matrix1.GetLength(0);
-        int rowMatrix2 = matrix2.GetLength(1);
+        int row = matrix1.GetLength(0);
+        int col = matrix1.GetLength(1);
+        int row2 = matrix2.GetLength(0);
+        int col2 = matrix12.GetLength(1);
     
-    if (colMatrix1 != rowMatrix2)
+    if (col != row2)
     {
         return cantMul;
     }
-    
+
     // initialize newMatrix with the correct w/h from passed param
     newMatrix = new double [colMatrix1, rowMatrix2];
     for (int i = 0; i < colMatrix1; i++)
