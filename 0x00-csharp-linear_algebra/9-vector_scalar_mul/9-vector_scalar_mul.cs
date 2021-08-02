@@ -1,8 +1,11 @@
 ﻿using System;
 
-
+    ///<summary>VectorMath defines methods to work with 2D and 3D vectors</summary>
     class VectorMath
     {
+        ///<summary>Multiply returns the vector multiplications of given "vector" by give "scalar".</summary>
+        ///<param name="vector">passed vector can be 2D or 3D vector.<param>
+        ///<param name="scalar">passed scalar can be positive or negative double.<param>
         public static double[] Multiply(double[] vector, double scalar)
         {
             double[] product = new double[] {-1};
@@ -14,18 +17,23 @@
 
             if (vector.Length == 2)
             {
-                product = new double[2] (scalar * vector[0], scalar * vector[1])
+                product = new double[2] {scalar * vector[0], scalar * vector[1]};
             }
             
-            return vector;
+            if (vector.Length ==3)
+            {
+                product = new double[3] {scalar * vector[0], scalar * vector[1], scalar * vector[2]};
+            }
+
+            return product;
         }
 
         static void Main(string[] args)
         {
-            double[] vectorEx = new double[]{2, -3, 0};
-            double scalarEx = 2;
+            double[] vectorEx = new double[]{-31, 20};
+            double scalarEx = 8;
 
-            Console.WriteLine("{0}", string.Join(", ", VectorMath.Multiply(vectorEx, scalarEx)));
+            Console.WriteLine("[{0}]", string.Join(", ", VectorMath.Multiply(vectorEx, scalarEx)));
 
         }
     }
