@@ -4,11 +4,12 @@ class MatrixMath
 {
     public static double[,] Rotate2D(double[,] matrix, double angle)
     {
-        double[,] rMatrix;
+        double[,] rMatrix = new double[2,2];
         double[,] wrongSize = new double[,]{{-1}};
+        double[,] rotate = new double[2, 2] {{Math.Cos(angle), Math.Sin(angle)}, {-1 * Math.Sin(angle), Math.Cos(angle)}};
         int row = matrix.GetLength(0);
         int col = matrix.GetLength(1);
-        int[] vector = new int[2];
+        
 
         if (row != 2 && col != 2)
         {
@@ -17,20 +18,16 @@ class MatrixMath
         
         for (int i = 0; i < row; i++)
         {
-            vector[0] = (matrix[i][0] * Math.Cos(angle)) - (matrix[i][1] * Math.Sin(angle));
-            vector[1] = (matrix[i][0] * Math.Sin(angle)) + (matrix[i][1] * Math.Cos(angle));
-            rMatrix[i] = vector;
+            for(int j = 0; j < col; j++)
+            {
+                for (int k = 0; k < 2; k++)
+                {
+                    rMatrix[i,j] = Math.Round(rMatrix[i, j] + (matrix[i, k] * rotate[k, j]), 2);
+                }
+            }
         }
 
         return rMatrix;
-    }
-
-    static void Main(string[] args)
-    {
-        double[,] matrix = new double[,]{{1, 2}, {3, 4}};
-        double angle = -1.57;
-
-        Console.WriteLine("[{0}]", string.Join(", ", MatrixMath.Rotate2D(matrix, angle)));
     }
 }
 
