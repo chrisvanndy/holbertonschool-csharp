@@ -15,7 +15,7 @@ class MatrixMath
         double[,] shear = new double[2,2] {{1,0}, {0,1}};
         double[,] newMatrix = new double[2,2];
 
-        if (row != 2 || col != 2)
+        if (row != 2 || col != 2 && direction != 'x' || direction != 'y')
         {
             return wrongSize;
         }
