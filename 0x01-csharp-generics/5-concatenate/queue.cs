@@ -81,7 +81,7 @@ class Queue<T>
         return head.value;
     }
 
-    ///<summary>Print prints each item in Queue<> to new line.</summary>
+    ///<summary>Print prints each item in Queue to new line.</summary>
     public void Print()
     {
          if (head == null)
@@ -96,6 +96,52 @@ class Queue<T>
             tail = tail.next;
         }
 
+    }
+    ///<summary>Concatenate concatenates Queue objects of type Char or Str.</summary>
+    public string Concatenate()
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+            return null;
+        }
+
+        else if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
+        {
+            Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
+            return null;
+        }
+
+        else 
+        {
+            int spacer = 0;
+            string toCat = "";
+            tail = head;
+
+            if (typeof(T) == typeof(char))
+            {
+                while (tail != null)
+                {
+                    toCat += tail.value;
+                    tail = tail.next;
+                }
+            }
+            
+            else if (typeof(T) == typeof(string))
+            {
+                while (tail != null)
+                {
+                    if (spacer != 0)
+                    {
+                        toCat += " ";
+                    }
+                    toCat += tail.value;
+                    tail = tail.next;
+                    spacer++;
+                }
+            }
+            return toCat;
+        }
     }
     ///<summary>Count returns the number of nodes in a linked list</summary>
     public int Count()
