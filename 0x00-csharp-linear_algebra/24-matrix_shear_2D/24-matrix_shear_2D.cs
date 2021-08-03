@@ -11,23 +11,28 @@ class MatrixMath
     {
         int row = matrix.GetLength(0);
         int col = matrix.GetLength(1);
-        double[,] wrongSize = new double[,]{{-1}};
+        double[,] wrong = new double[,]{{-1}};
         double[,] shear = new double[2,2] {{1,0}, {0,1}};
         double[,] newMatrix = new double[2,2];
 
-        if (row != 2 || col != 2 && direction != 'x' || direction != 'y')
+        if (row != 2 || col != 2)
         {
-            return wrongSize;
+            return wrong;
         }
+
 
         if (direction == 'x')
         {
             shear[1, 0] = factor;
         }
 
-        if (direction == 'y')
+        else if (direction == 'y')
         {
             shear[0, 1] = factor;
+        }
+        else
+        {
+            return wrong;
         }
 
         for (int i = 0; i < row; i++)
