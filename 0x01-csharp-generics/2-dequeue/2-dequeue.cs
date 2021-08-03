@@ -51,6 +51,21 @@ class Queue<T>
         }
         count++;
     }
+
+    public T Dequeue()
+    {
+        if (head == null)
+        {
+            Console.WriteLine("Queue is empty");
+            return default(T);
+        }
+        tail.value = head.value;
+        head = head.next;
+        count--;
+        
+        return tail.value;
+
+    }
     ///<summary>Count returns the number of nodes in a linked list</summary>
     public int Count()
     {
