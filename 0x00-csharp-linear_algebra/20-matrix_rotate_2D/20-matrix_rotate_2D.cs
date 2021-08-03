@@ -11,7 +11,7 @@ class MatrixMath
         int col = matrix.GetLength(1);
         
 
-        if (row != 2 && col != 2)
+        if (row != col)
         {
             return wrongSize;
         }
