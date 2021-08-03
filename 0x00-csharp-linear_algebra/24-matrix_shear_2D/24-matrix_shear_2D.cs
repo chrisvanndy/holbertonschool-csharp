@@ -4,6 +4,7 @@
 class MatrixMath
 {
     ///<summary>Method that shears a 2D matrix by factor and direction</summary>
+    ///<param name="matrix">Parameter matrix is the passed matrix.</param>
     ///<param name="direction">Parameter 'direction' indicates to shear matrix in the X or Y direction</param>
     ///<param name="factor">Parameter 'factor' indicates a the shear factor by which to shear the matrix.</param>
     public static double[,] Shear2D(double[,] matrix, char direction, double factor)
@@ -42,3 +43,4 @@ class MatrixMath
 
         return newMatrix;
     }
+}
