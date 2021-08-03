@@ -52,6 +52,7 @@ class Queue<T>
         count++;
     }
 
+    ///<summary>Dequeue returns the first value in a Queue</summary>
     public T Dequeue()
     {
         if (head == null)
@@ -59,6 +60,7 @@ class Queue<T>
             Console.WriteLine("Queue is empty");
             return default(T);
         }
+
         tail.value = head.value;
         head = head.next;
         count--;
