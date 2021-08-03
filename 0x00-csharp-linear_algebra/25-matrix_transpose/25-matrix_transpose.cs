@@ -8,7 +8,7 @@ class MatrixMath
     {
         int row = matrix.GetLength(0);
         int col = matrix.GetLength(1);
-        double[,] newMatrix = new double[column, row];
+        double[,] newMatrix = new double[col, row];
 
         for (int i = 0; i < row; i++)
         {
