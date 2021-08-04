@@ -1,10 +1,10 @@
 ﻿using System;
 
 
-///<summary>Class Queue manually defines a class which expectes a Type.</summary>
+///<summary>Class Queue manually defines a class which expects a Type.</summary>
 class Queue<T>
 {
-    ///<summary>CheckType returns the type of the queue object its called on.</summary>
+    ///<summary>CheckType returns the type of the queue object it is called on.</summary>
     ///<return>The CheckType method returns the type of Queue object its operating on.</return>
 
     ///<summary>Define properties of Node Class.</summary>
@@ -28,7 +28,7 @@ class Queue<T>
     int count;
 
     ///<summary>Enqueue adds node to the tail of a list</summary>
-    ///<param name="value">The value may be of any type and is set to the.</param>
+    ///<param name="value">The value may be of any type and is set to the value of the Node object</param>
     public void Enqueue(T value)
     {
         //Create an object instance of "Node"
@@ -45,14 +45,16 @@ class Queue<T>
         else
         {
             //set tail.next equal to the Node ojbect 
+            //?? tail was = head, pointer to next then set to head??
             tail.next = addEnd;
             //set the newly created node to tail
+            //** this concept is stiff fuzzy address at PLD
             tail = addEnd;
         }
         count++;
     }
 
-    ///<summary>Dequeue returns the first value in a Queue</summary>
+    ///<summary>Dequeue returns the first value in a Queue and removes the Node</summary>
     public T Dequeue()
     {
         if (head == null)
@@ -61,6 +63,8 @@ class Queue<T>
             return default(T);
         }
 
+        //** this concept is still fuzzy discuss at PLD why set to tail?
+        //** ?? this is because tail is a traversing / temp pointer??
         tail.value = head.value;
         head = head.next;
         count--;
@@ -81,7 +85,7 @@ class Queue<T>
         return head.value;
     }
 
-    ///<summary>Print prints each item in Queue to new line.</summary>
+    ///<summary>Print prints each item in Queue on a new line.</summary>
     public void Print()
     {
          if (head == null)
@@ -97,7 +101,7 @@ class Queue<T>
         }
 
     }
-    ///<summary>Concatenate concatenates Queue objects of type Char or Str.</summary>
+    ///<summary>Concatenate concatenates Queue objects of type Char or Str only.</summary>
     public string Concatenate()
     {
         if (head == null)
@@ -116,10 +120,12 @@ class Queue<T>
         {
             int spacer = 0;
             string toCat = "";
+            // set tail node to head of list
             tail = head;
 
             if (typeof(T) == typeof(char))
             {
+                // as long as node is not null, concat .value to new string var
                 while (tail != null)
                 {
                     toCat += tail.value;
