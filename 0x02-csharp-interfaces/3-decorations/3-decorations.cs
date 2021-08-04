@@ -70,7 +70,7 @@ class Decoration : Base, IInteractive, IBreakable
     {
         if (durability <= 0)
         {
-            Console.Write("This {0} has been broken", name);
+            Console.WriteLine("This {0} has been broken.", name);
         }
         else if (isQuestItem == false)
         {
@@ -87,7 +87,7 @@ class Decoration : Base, IInteractive, IBreakable
         durability--;
         if (durability > 0)
         {
-            Console.WriteLine("You hit the {0}. It cracks", name);
+            Console.WriteLine("You hit the {0}. It cracks.", name);
         }
         else if (durability == 0)
         {
@@ -95,7 +95,7 @@ class Decoration : Base, IInteractive, IBreakable
         }
         else if (durability < 0)
         {
-            Console.WriteLine("The {0} is already broken", name);
+            Console.WriteLine("The {0} is already broken.", name);
         }
     }
 }
