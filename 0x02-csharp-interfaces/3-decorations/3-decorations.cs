@@ -70,7 +70,7 @@ class Decoration : Base, IInteractive, IBreakable
     {
         if (durability <= 0)
         {
-            Console.WriteLine("This {0} has been broken.", name);
+            Console.WriteLine("The {0} has been broken.", name);
         }
         else if (isQuestItem == false)
         {
