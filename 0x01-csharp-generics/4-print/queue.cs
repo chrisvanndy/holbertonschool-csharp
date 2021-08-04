@@ -81,7 +81,7 @@ class Queue<T>
         return head.value;
     }
 
-    ///<summary>Print prints each item in Queue<> to new line.</summary>
+    ///<summary>Print prints each item in Queue to new line.</summary>
     public void Print()
     {
          if (head == null)
