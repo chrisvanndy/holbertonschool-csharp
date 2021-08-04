@@ -129,12 +129,12 @@ class RoomObjects
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
         //given list of type BASE
-        foreach (Base item in roomObjects)
+        foreach (var item in roomObjects)
         {
             // iterate through the list, each item.
             // if item is compatible with IInteractive and type is the same type.
             if (item is IInteractive && type == typeof(IInteractive))
-            {
+            {   
                 //to access appropriate method for roomObject typecast to correct interface
                 ((IInteractive)item).Interact();
             }
