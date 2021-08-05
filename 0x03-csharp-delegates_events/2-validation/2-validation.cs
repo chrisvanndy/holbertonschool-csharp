@@ -57,6 +57,7 @@ public class Player
         if (heal < 0)
         {
             Console.WriteLine("{0} heals 0 HP!", this.name);
+            heal = 0;
         }
         else
         {
@@ -74,7 +75,8 @@ public class Player
     {
         if (newHp < 0)
         {
-            this.hp = 0;
+            this.hp = newHp;
+            
         }
         else if (newHp > this.maxHp)
         {
