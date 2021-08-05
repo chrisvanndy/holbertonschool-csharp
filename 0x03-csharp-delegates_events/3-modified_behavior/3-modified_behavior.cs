@@ -48,18 +48,27 @@ public class Player
     
     ///<summary>TakeDamage subtracts from the players hp.</summary>
     ///<param name="damage">Float passed to TakeDamage to be subracted from players hp.</param>
-    public void TakeDamage(float damage)
+     public void TakeDamage(float damage)
     {
         if (damage < 0)
         {
             Console.WriteLine("{0} takes 0 damage!", this.name);
         }
+
         else
         {
             Console.WriteLine("{0} takes {1} damage!", this.name, damage);
         }
 
-        this.hp = this.hp - damage;
+       if (damage < this.maxHp)
+       {
+           this.hp = this.hp - damage;
+       }
+       else
+       {
+           this.hp = 0;
+       }
+       
         CalculateHealth subHP = ValidateHP;
         subHP(this.hp);
 
@@ -71,6 +80,7 @@ public class Player
         if (heal < 0)
         {
             Console.WriteLine("{0} heals 0 HP!", this.name);
+            heal = 0;
         }
         else
         {
@@ -121,4 +131,3 @@ public class Player
     }
 
 }
-
