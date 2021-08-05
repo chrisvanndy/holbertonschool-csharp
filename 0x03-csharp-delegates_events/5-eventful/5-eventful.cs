@@ -182,12 +182,12 @@ public class Player
     ///<summary>OnCheckStatus raises an event</summary>
     public virtual void OnCheckStatus(CurrentHPArgs e)
     {
+        CheckStatus(HPCheck, new CurrentHPArgs(this.hp));
+
         if (e.currentHp <= (this.hp * .25f))
         {
             HPValueWarning(HPCheck, new CurrentHPArgs(this.hp));
         }
-
-        CheckStatus(HPCheck, new CurrentHPArgs(this.hp));
     }
 
     ///<summary>HPValueWarning returns infromation about he player.</summary>
