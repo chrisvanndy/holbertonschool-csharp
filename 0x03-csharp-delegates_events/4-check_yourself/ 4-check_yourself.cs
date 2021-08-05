@@ -163,7 +163,7 @@ public class Player
         }
         if (e.currentHp >= (this.maxHp *.25) && e.currentHp < (this.maxHp * .5f))
         {
-            Console.WriteLine("{0} isn't doing too great!", this.name);
+            Console.WriteLine("{0} isn't doing too great...", this.name);
         }
         if (e.currentHp > 0 && e.currentHp < (this.maxHp * .25f))
         {
