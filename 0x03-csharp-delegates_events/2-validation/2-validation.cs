@@ -40,12 +40,21 @@ public class Player
         {
             Console.WriteLine("{0} takes 0 damage!", this.name);
         }
+
         else
         {
             Console.WriteLine("{0} takes {1} damage!", this.name, damage);
         }
 
-        this.hp = this.hp - damage;
+       if (damage < this.maxHp)
+       {
+           this.hp = this.hp - damage;
+       }
+       else
+       {
+           this.hp = 0;
+       }
+       
         CalculateHealth subHP = ValidateHP;
         subHP(this.hp);
 
